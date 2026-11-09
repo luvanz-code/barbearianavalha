@@ -1,11 +1,11 @@
-import re
+﻿import re
 
 class BookingService:
     def __init__(self):
         self.appointments = []
 
     def validate_phone(self, phone: str) -> bool:
-        \"\"\"Valida formato de celular brasileiro com DDD (10 ou 11 digitos).\"\"\"
+        """Valida formato de celular brasileiro com DDD (10 ou 11 digitos)."""
         digits = re.sub(r'\D', '', phone)
         return len(digits) in (10, 11)
 
@@ -15,7 +15,6 @@ class BookingService:
         if not client_phone or not self.validate_phone(client_phone):
             raise ValueError("Numero de telefone invalido. Informe o DDD e o numero.")
         
-        # Verificacao de double-booking (concorrencia de horario)
         for app in self.appointments:
             if app['scheduled_at'] == scheduled_at and app.get('status') != 'CANCELADO':
                 raise ValueError("Horario indisponivel (double-booking).")
