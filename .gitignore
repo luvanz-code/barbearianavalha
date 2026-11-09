@@ -1,0 +1,30 @@
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Python e Bytecode
+__pycache__/
+*.py[cod]
+*.class
+*.so
+
+# Variáveis de ambiente e segredos locais
+.env
+.env.local
+
+# Banco de dados local
+*.sqlite3
+*.db
+instance/
+
+# Cobertura e relatórios de testes
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
