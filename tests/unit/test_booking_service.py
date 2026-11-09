@@ -6,6 +6,11 @@ def test_booking_success():
     res = service.book_slot("Carlos Silva", "41999998888", "Corte + Barba", "2026-11-10 14:15")
     assert res['status'] == 'AGENDADO'
 
+def test_booking_invalid_phone():
+    service = BookingService()
+    with pytest.raises(ValueError, match="Numero de telefone invalido"):
+        service.book_slot("Carlos Silva", "123", "Corte", "2026-11-10 14:15")
+
 def test_double_booking_prevention():
     service = BookingService()
     service.book_slot("Carlos Silva", "41999998888", "Corte + Barba", "2026-11-10 14:15")
