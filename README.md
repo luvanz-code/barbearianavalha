@@ -1,29 +1,29 @@
-# ?? Barbearia Navalha Urbana — MVP
+# Barbearia Navalha Urbana â€” MVP
 
-Sistema de agendamento autónomo e controlo de bancada mobile-first voltado à eficiência operacional de microempreendimentos locais, alinhado ao **ODS 8 (Trabalho Digno e Crescimento Económico)**.
+Sistema de agendamento autÃ³nomo e controlo de bancada mobile-first voltado Ã  eficiÃªncia operacional de microempreendimentos locais, alinhado ao **ODS 8 (Trabalho Digno e Crescimento EconÃ³mico)**.
 
 ---
 
-## ?? Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * **Backend:** Python 3.11+, Flask, Flask-WTF, SQLAlchemy
 * **Frontend:** Jinja2 Templates, Tailwind CSS (Mobile-First, WCAG 2.1 AA)
-* **Base de Dados:** PostgreSQL (Produção) / SQLite (Testes)
+* **Base de Dados:** PostgreSQL (ProduÃ§Ã£o) / SQLite (Testes)
 * **Qualidade e Testes:** Pytest, Flake8, GitHub Actions (CI)
 
 ---
 
-## ?? Estrutura do Projeto
+## Estrutura do Projeto
 \\\	ext
 barbearianavalha/
 +-- app/
-¦   +-- controllers/      # Rotas públicas e de gestão
-¦   +-- models/           # Modelação relacional e entidades
-¦   +-- services/         # Regras de negócio (ex: BookingService com bloqueio atómico)
-¦   +-- static/           # Estilos e assets estáticos
-¦   +-- templates/        # Telas Jinja2 acessíveis (WCAG 2.1 AA)
+Â¦   +-- controllers/      # Rotas pÃºblicas e de gestÃ£o
+Â¦   +-- models/           # ModelaÃ§Ã£o relacional e entidades
+Â¦   +-- services/         # Regras de negÃ³cio (ex: BookingService com bloqueio atÃ³mico)
+Â¦   +-- static/           # Estilos e assets estÃ¡ticos
+Â¦   +-- templates/        # Telas Jinja2 acessÃ­veis (WCAG 2.1 AA)
 +-- tests/
-¦   +-- unit/             # Testes unitários das regras de negócio
-¦   +-- integration/      # Testes de rotas, formulários e base de dados
+Â¦   +-- unit/             # Testes unitÃ¡rios das regras de negÃ³cio
+Â¦   +-- integration/      # Testes de rotas, formulÃ¡rios e base de dados
 +-- .github/workflows/    # Pipeline de CI (build, lint e testes)
 +-- .gitignore
 +-- requirements.txt
@@ -31,54 +31,3 @@ barbearianavalha/
 \\\
 
 ---
-
-## ??? Como Executar Localmente
-
-1. **Clonar o repositório:**
-   \\\ash
-   git clone https://github.com/luvanz-code/barbearianavalha.git
-   cd barbearianavalha
-   \\\
-
-2. **Criar e ativar o ambiente virtual:**
-   \\\powershell
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1
-   \\\
-
-3. **Instalar dependências:**
-   \\\ash
-   pip install -r requirements.txt
-   \\\
-
-4. **Executar a aplicação:**
-   \\\ash
-   flask run
-   \\\
-
-5. **Executar os testes:**
-   \\\ash
-   pytest
-   \\\
-"@
-
-New-Item -ItemType File -Force -Path 
-  "app\__init__.py", 
-  "app\controllers\__init__.py", 
-  "app\models\__init__.py", 
-  "app\services\__init__.py", 
-  "tests\__init__.py", 
-  "tests\unit\__init__.py", 
-  "tests\integration\__init__.py"
-# 1. Adicionar todos os ficheiros criados
-git add .
-
-# 2. Registar o primeiro commit estruturado
-git commit -m "chore(init): initial project structure, README and gitignore"
-
-# 3. Garantir o nome da branch principal como main
-git branch -M main
-
-# 4. Vincular o repositório remoto (caso ainda não tenha adicionado)
-git remote
-"
